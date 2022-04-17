@@ -52,7 +52,7 @@ char.Torso.Anchored = true
 notify('XyC🔥','Use for good! Or no😈...\nPlease wait '..penis..' seconds.')
 wait(penis)
 char.Torso.Anchored=false
-notify('Nexo','Reanimated..')
+notify('XyC','Reanimated..')
 char.Humanoid.Health=0
 --reanim.Humanoid.AutoRotate=false
 reanim.Animate.Disabled = true
@@ -317,4 +317,4 @@ end))
 
 game:GetService("StarterGui"):SetCore("ResetButtonCallback", reset)
 
-notify('Script feito por: Lucas27-Owner, espero que goste!')
+notify('XyC','Olá, Lucas💖..')
