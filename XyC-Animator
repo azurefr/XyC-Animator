@@ -1,320 +1,903 @@
-plr = game.Players.LocalPlayer
-char=game.Players.LocalPlayer.Character
-ct={}
-te=table.insert
+-- Gui to Lua
+-- Version: 3.2
 
-HumanDied=false
+-- Instances:
 
-for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-if v:IsA("BasePart") then 
-te(ct,game:GetService("RunService").Heartbeat:connect(function()
-pcall(function()
-v.Velocity = Vector3.new(0,-30,0)
-sethiddenproperty(game.Players.LocalPlayer,"MaximumSimulationRadius",math.huge)
-sethiddenproperty(game.Players.LocalPlayer,"SimulationRadius",999999999)
-game.Players.LocalPlayer.ReplicationFocus = workspace
-end)
-end))
+local lol = Instance.new("ScreenGui")
+local botao = Instance.new("ImageButton")
+local ImageLabel = Instance.new("ImageLabel")
+local topbar = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local ui = Instance.new("Frame")
+local Anims = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local Anim = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Anim_2 = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Anim_3 = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Anim_4 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Anim_5 = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local Anim_6 = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Anim_7 = Instance.new("TextButton")
+local UICorner_7 = Instance.new("UICorner")
+local Anim_8 = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Anim_9 = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Anim_10 = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Anim_11 = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local Anim_12 = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
+local Anim_13 = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+
+--Properties:
+
+lol.Name = "lol"
+lol.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+lol.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+botao.Name = "botao"
+botao.Parent = lol
+botao.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+botao.BackgroundTransparency = 1.000
+botao.BorderColor3 = Color3.fromRGB(0, 0, 0)
+botao.BorderSizePixel = 0
+botao.Position = UDim2.new(0.0225354228, 0, 0.857432723, 0)
+botao.Size = UDim2.new(0, 65, 0, 65)
+botao.Image = "http://www.roblox.com/asset/?id=101854654"
+botao.ImageColor3 = Color3.fromRGB(188, 255, 167)
+
+ImageLabel.Parent = botao
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(-0.141870007, 0, -0.1422645, 0)
+ImageLabel.Size = UDim2.new(0, 83, 0, 82)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=10131954007"
+
+topbar.Name = "topbar"
+topbar.Parent = lol
+topbar.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+topbar.BackgroundTransparency = 0.100
+topbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+topbar.BorderSizePixel = 0
+topbar.Position = UDim2.new(0.274251461, 0, 0.342762053, 0)
+topbar.Size = UDim2.new(0.425086409, 0, 0.0682196319, 0)
+topbar.Visible = false
+
+TextLabel.Parent = topbar
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-8.61842366e-08, 0, 0, 0)
+TextLabel.Size = UDim2.new(1.00000012, 0, 0, 40)
+TextLabel.Font = Enum.Font.Highway
+TextLabel.Text = "lol anim SS"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 30.000
+TextLabel.TextWrapped = true
+
+ui.Name = "ui"
+ui.Parent = topbar
+ui.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+ui.BackgroundTransparency = 0.100
+ui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ui.BorderSizePixel = 0
+ui.Position = UDim2.new(1.07431795e-07, 0, 0.981976748, 0)
+ui.Size = UDim2.new(0.998483419, 0, 6.56234217, 0)
+
+Anims.Name = "Anims"
+Anims.Parent = ui
+Anims.Active = true
+Anims.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Anims.BackgroundTransparency = 1.000
+Anims.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anims.BorderSizePixel = 0
+Anims.Position = UDim2.new(7.17299784e-08, 0, 0, 0)
+Anims.Size = UDim2.new(1.00151873, 0, 0.0364564881, 250)
+Anims.ScrollBarThickness = 0
+
+UIGridLayout.Parent = Anims
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellPadding = UDim2.new(0, 8, 0, 6)
+UIGridLayout.CellSize = UDim2.new(0, 80, 0, 70)
+
+Anim.Name = "Anim"
+Anim.Parent = Anims
+Anim.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim.BorderSizePixel = 0
+Anim.Position = UDim2.new(0.212201595, 0, 0, 0)
+Anim.Size = UDim2.new(0, 75, 0, 84)
+Anim.Font = Enum.Font.Unknown
+Anim.Text = "Horror"
+Anim.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim.TextSize = 14.000
+
+UICorner.Parent = Anim
+
+Anim_2.Name = "Anim"
+Anim_2.Parent = Anims
+Anim_2.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim_2.BorderSizePixel = 0
+Anim_2.Position = UDim2.new(0.212201595, 0, 0, 0)
+Anim_2.Size = UDim2.new(0, 75, 0, 84)
+Anim_2.Font = Enum.Font.Unknown
+Anim_2.Text = "Peter Parker"
+Anim_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim_2.TextSize = 14.000
+
+UICorner_2.Parent = Anim_2
+
+Anim_3.Name = "Anim"
+Anim_3.Parent = Anims
+Anim_3.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim_3.BorderSizePixel = 0
+Anim_3.Position = UDim2.new(0.212201595, 0, 0, 0)
+Anim_3.Size = UDim2.new(0, 75, 0, 84)
+Anim_3.Font = Enum.Font.Unknown
+Anim_3.Text = "Clean Groove"
+Anim_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim_3.TextSize = 14.000
+
+UICorner_3.Parent = Anim_3
+
+Anim_4.Name = "Anim"
+Anim_4.Parent = Anims
+Anim_4.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim_4.BorderSizePixel = 0
+Anim_4.Position = UDim2.new(0.212201595, 0, 0, 0)
+Anim_4.Size = UDim2.new(0, 75, 0, 84)
+Anim_4.Font = Enum.Font.Unknown
+Anim_4.Text = "Kazotsky Kick"
+Anim_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim_4.TextSize = 14.000
+
+UICorner_4.Parent = Anim_4
+
+Anim_5.Name = "Anim"
+Anim_5.Parent = Anims
+Anim_5.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim_5.BorderSizePixel = 0
+Anim_5.Position = UDim2.new(0.212201595, 0, 0, 0)
+Anim_5.Size = UDim2.new(0, 75, 0, 84)
+Anim_5.Font = Enum.Font.Unknown
+Anim_5.Text = "Helicopter"
+Anim_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim_5.TextSize = 14.000
+
+UICorner_5.Parent = Anim_5
+
+Anim_6.Name = "Anim"
+Anim_6.Parent = Anims
+Anim_6.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim_6.BorderSizePixel = 0
+Anim_6.Position = UDim2.new(0.212201595, 0, 0, 0)
+Anim_6.Size = UDim2.new(0, 75, 0, 84)
+Anim_6.Font = Enum.Font.Unknown
+Anim_6.Text = "Loud Laugh"
+Anim_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim_6.TextSize = 14.000
+
+UICorner_6.Parent = Anim_6
+
+Anim_7.Name = "Anim"
+Anim_7.Parent = Anims
+Anim_7.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim_7.BorderSizePixel = 0
+Anim_7.Position = UDim2.new(0.212201595, 0, 0, 0)
+Anim_7.Size = UDim2.new(0, 75, 0, 84)
+Anim_7.Font = Enum.Font.Unknown
+Anim_7.Text = "PP Music"
+Anim_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim_7.TextSize = 14.000
+
+UICorner_7.Parent = Anim_7
+
+Anim_8.Name = "Anim"
+Anim_8.Parent = Anims
+Anim_8.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim_8.BorderSizePixel = 0
+Anim_8.Position = UDim2.new(0.212201595, 0, 0, 0)
+Anim_8.Size = UDim2.new(0, 75, 0, 84)
+Anim_8.Font = Enum.Font.Unknown
+Anim_8.Text = "Basket Head"
+Anim_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim_8.TextSize = 14.000
+
+UICorner_8.Parent = Anim_8
+
+Anim_9.Name = "Anim"
+Anim_9.Parent = Anims
+Anim_9.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim_9.BorderSizePixel = 0
+Anim_9.Position = UDim2.new(0.212201595, 0, 0, 0)
+Anim_9.Size = UDim2.new(0, 75, 0, 84)
+Anim_9.Font = Enum.Font.Unknown
+Anim_9.Text = "Floss"
+Anim_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim_9.TextSize = 14.000
+
+UICorner_9.Parent = Anim_9
+
+Anim_10.Name = "Anim"
+Anim_10.Parent = Anims
+Anim_10.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim_10.BorderSizePixel = 0
+Anim_10.Position = UDim2.new(0.212201595, 0, 0, 0)
+Anim_10.Size = UDim2.new(0, 75, 0, 84)
+Anim_10.Font = Enum.Font.Unknown
+Anim_10.Text = "Hakari"
+Anim_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim_10.TextSize = 14.000
+
+UICorner_10.Parent = Anim_10
+
+Anim_11.Name = "Anim"
+Anim_11.Parent = Anims
+Anim_11.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim_11.BorderSizePixel = 0
+Anim_11.Position = UDim2.new(0.212201595, 0, 0, 0)
+Anim_11.Size = UDim2.new(0, 75, 0, 84)
+Anim_11.Font = Enum.Font.Unknown
+Anim_11.Text = "Default"
+Anim_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim_11.TextSize = 14.000
+
+UICorner_11.Parent = Anim_11
+
+Anim_12.Name = "Anim"
+Anim_12.Parent = Anims
+Anim_12.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim_12.BorderSizePixel = 0
+Anim_12.Position = UDim2.new(0.212201595, 0, 0, 0)
+Anim_12.Size = UDim2.new(0, 75, 0, 84)
+Anim_12.Font = Enum.Font.Unknown
+Anim_12.Text = "DancePotion"
+Anim_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim_12.TextSize = 14.000
+
+UICorner_12.Parent = Anim_12
+
+Anim_13.Name = "Anim"
+Anim_13.Parent = Anims
+Anim_13.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
+Anim_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Anim_13.BorderSizePixel = 0
+Anim_13.Size = UDim2.new(0, 75, 0, 84)
+Anim_13.Font = Enum.Font.Unknown
+Anim_13.Text = "TAKE THE L"
+Anim_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+Anim_13.TextSize = 14.000
+
+UICorner_13.Parent = Anim_13
+
+-- Scripts:
+
+local function UUHYN_fake_script() -- botao.abrir 
+	local script = Instance.new('LocalScript', botao)
+
+	local botao = script.Parent
+	local frame = script.Parent.Parent.topbar
+	
+	botao.MouseButton1Click:Connect(function()
+		-- Alterna a visibilidade do frame
+		frame.Visible = not frame.Visible
+	end)
+	
 end
+coroutine.wrap(UUHYN_fake_script)()
+local function AELAP_fake_script() -- botao.rodar 
+	local script = Instance.new('LocalScript', botao)
+
+	local image = script.Parent 
+	
+	local speedRodar = 0.9 -- valor personalizado 
+	
+	while true do 
+		image.Rotation = image.Rotation + speedRodar -- Aumenta a rotação da imagem
+		wait(0.09) -- Aguarda um pequeno intervalo antes de rotacionar novamente
+	end
+	
 end
+coroutine.wrap(AELAP_fake_script)()
+local function JHGX_fake_script() -- ImageLabel.rodar 
+	local script = Instance.new('LocalScript', ImageLabel)
 
-function notify(t,tex,dur)
-game.StarterGui:SetCore("SendNotification", {
-    Title = t; 
-    Text = tex; 
-    Duration = dur or 5;
-})
+	local image = script.Parent 
+	
+	local speedRodar = 1 -- valor personalizado 
+	
+	while true do 
+		image.Rotation = image.Rotation + speedRodar -- Aumenta a rotação da imagem
+		wait(0.03) -- Aguarda um pequeno intervalo antes de rotacionar novamente
+	end
+	
 end
+coroutine.wrap(JHGX_fake_script)()
+local function DDFE_fake_script() -- Anim.LocalScript 
+	local script = Instance.new('LocalScript', Anim)
 
-local srv= game:GetService("RunService")
-
-fl=Instance.new('Folder',char);fl.Name='CWExtra'
-
-char.Archivable = true
-local reanim = char:Clone()
-reanim.Name='NexoPD'
-
-for i,v in next, reanim:GetDescendants() do
-if v:IsA('BasePart') or v:IsA('Decal') then
-v.Transparency = 1 
-end 
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://76361383590591"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(DDFE_fake_script)()
+local function VAAPJAS_fake_script() -- Anim_2.LocalScript 
+	local script = Instance.new('LocalScript', Anim_2)
 
---flinge = false
-
-penis=5.65
-plr.Character=nil
-plr.Character=char
-char.Humanoid.AutoRotate=false
-char.Humanoid.WalkSpeed=0
-char.Humanoid.JumpPower=0
-char.Torso.Anchored = true
-notify('XyC🔥','Use for good! Or no😈...\nPlease wait '..penis..' seconds.')
-wait(penis)
-char.Torso.Anchored=false
-notify('XyC','Reanimated..')
-char.Humanoid.Health=0
---reanim.Humanoid.AutoRotate=false
-reanim.Animate.Disabled = true
-reanim.Parent = fl
-reanim.HumanoidRootPart.CFrame = char.HumanoidRootPart.CFrame*CFrame.new(0,5,0)
-
-function create(part, parent, p, r)
-Instance.new("Attachment",part)
-Instance.new("AlignPosition",part)
-Instance.new("AlignOrientation",part)
-Instance.new("Attachment",parent)
-part.Attachment.Name = part.Name
-parent.Attachment.Name = part.Name
-part.AlignPosition.Attachment0 = part[part.Name]
-part.AlignOrientation.Attachment0 = part[part.Name]
-part.AlignPosition.Attachment1 = parent[part.Name]
-part.AlignOrientation.Attachment1 = parent[part.Name]
-parent[part.Name].Position = p or Vector3.new()
-part[part.Name].Orientation = r or Vector3.new()
-part.AlignPosition.MaxForce = 999999999
-part.AlignPosition.MaxVelocity = math.huge
-part.AlignPosition.ReactionForceEnabled = false
-part.AlignPosition.Responsiveness = math.huge
-part.AlignOrientation.Responsiveness = math.huge
-part.AlignPosition.RigidityEnabled = false
-part.AlignOrientation.MaxTorque = 999999999
-part.Massless=true
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://97250709692612"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(VAAPJAS_fake_script)()
+local function QTVEH_fake_script() -- Anim_3.LocalScript 
+	local script = Instance.new('LocalScript', Anim_3)
 
-function Pos(part, parent, p)
-Instance.new("Attachment",part)
-Instance.new("AlignPosition",part)
-Instance.new("Attachment",parent)
-part.Attachment.Name = part.Name
-parent.Attachment.Name = part.Name
-part.AlignPosition.Attachment0 = part[part.Name]
---part.AlignOrientation.Attachment0 = part[part.Name]
-part.AlignPosition.Attachment1 = parent[part.Name]
---part.AlignOrientation.Attachment1 = parent[part.Name]
-parent[part.Name].Position = p or Vector3.new()
-part.AlignPosition.MaxForce = 999999999
-part.AlignPosition.MaxVelocity = math.huge
-part.AlignPosition.ReactionForceEnabled = false
-part.AlignPosition.Responsiveness = math.huge
---part.AlignOrientation.Responsiveness = math.huge
---part.AlignPosition.RigidityEnabled = false
---part.AlignOrientation.MaxTorque = 999999999
-part.Massless=true
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://72755165836017"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação em loop
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()  -- Começa a animação
+	
+					-- Garantir que a animação continue em loop
+					currentAnimation.Looped = true  -- Define para rodar em loop
+	
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(QTVEH_fake_script)()
+local function TTQJYC_fake_script() -- Anim_4.LocalScript 
+	local script = Instance.new('LocalScript', Anim_4)
 
-for i,part in next, char:GetDescendants() do
-if part:IsA('BasePart') then
-te(ct,srv.RenderStepped:Connect(function()
-part.CanCollide=false
-end))
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://78563542070110"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação em loop
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()  -- Começa a animação
+	
+					-- Garantir que a animação continue em loop
+					currentAnimation.Looped = true  -- Define para rodar em loop
+	
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(TTQJYC_fake_script)()
+local function IBVM_fake_script() -- Anim_5.LocalScript 
+	local script = Instance.new('LocalScript', Anim_5)
+
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://110495667908099"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação em loop
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()  -- Começa a animação
+	
+					-- Garantir que a animação continue em loop
+					currentAnimation.Looped = true  -- Define para rodar em loop
+	
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(IBVM_fake_script)()
+local function HLYM_fake_script() -- Anim_6.LocalScript 
+	local script = Instance.new('LocalScript', Anim_6)
 
-for i,part in next, char:GetDescendants() do
-if part:IsA('BasePart') then
-te(ct,srv.Stepped:Connect(function()
-part.CanCollide=false
-end))
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://111066132694288"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação em loop
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()  -- Começa a animação
+	
+					-- Garantir que a animação continue em loop
+					currentAnimation.Looped = true  -- Define para rodar em loop
+	
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(HLYM_fake_script)()
+local function ALYGS_fake_script() -- Anim_7.LocalScript 
+	local script = Instance.new('LocalScript', Anim_7)
+
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://139815615103349"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(ALYGS_fake_script)()
+local function ZNWZ_fake_script() -- Anim_8.LocalScript 
+	local script = Instance.new('LocalScript', Anim_8)
 
-for i,part in next, reanim:GetDescendants() do
-if part:IsA('BasePart') then
-te(ct,srv.RenderStepped:Connect(function()
-part.CanCollide=false
-end))
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://72200145487150"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(ZNWZ_fake_script)()
+local function QYOMLQS_fake_script() -- Anim_9.LocalScript 
+	local script = Instance.new('LocalScript', Anim_9)
+
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://100264003823888"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(QYOMLQS_fake_script)()
+local function XWSR_fake_script() -- Anim_10.LocalScript 
+	local script = Instance.new('LocalScript', Anim_10)
 
-for i,part in next, reanim:GetDescendants() do
-if part:IsA('BasePart') then
-te(ct,srv.Stepped:Connect(function()
-part.CanCollide=false
-end))
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://102290865924122"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(XWSR_fake_script)()
+local function FLPA_fake_script() -- Anim_11.LocalScript 
+	local script = Instance.new('LocalScript', Anim_11)
+
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://82634187050716"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(FLPA_fake_script)()
+local function OUWCA_fake_script() -- Anim_12.LocalScript 
+	local script = Instance.new('LocalScript', Anim_12)
 
-for i,v in next, char:GetDescendants() do
-if v:IsA('Accessory') then
-create(v.Handle,reanim[v.Name].Handle)
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://35654637"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(OUWCA_fake_script)()
+local function QVNNDEM_fake_script() -- Anim_13.LocalScript 
+	local script = Instance.new('LocalScript', Anim_13)
+
+	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
+	local animationId = "rbxassetid://78524326419130"  -- Substitua com o ID da animação desejada
+	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
+	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	
+	button.MouseButton1Click:Connect(function()
+		isOn = not isOn  -- Alterna o estado ON/OFF
+	
+		local character = game.Players.LocalPlayer.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if isOn then
+					-- Mudar a cor do botão para verde quando ON
+					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
+	
+					-- Tocar a animação
+					local animation = Instance.new("Animation")
+					animation.AnimationId = animationId
+					currentAnimation = humanoid:LoadAnimation(animation)
+					currentAnimation:Play()
+				else
+					-- Mudar a cor do botão para branco quando OFF
+					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+	
+					-- Parar a animação
+					if currentAnimation then
+						currentAnimation:Stop()
+					end
+				end
+			end
+		end
+	end)
+	
 end
+coroutine.wrap(QVNNDEM_fake_script)()
+local function NQSMJX_fake_script() -- topbar.UIDrag 
+	local script = Instance.new('LocalScript', topbar)
 
---Pos(fhrp,reanim['Torso'])
-create(char['Head'],reanim['Head'])
-create(char['Torso'],reanim['Torso'])
-Pos(char['HumanoidRootPart'],reanim['Torso'],Vector3.new(0,0,0))
-create(char['Right Arm'],reanim['Right Arm'])
-create(char['Left Arm'],reanim['Left Arm'])
-create(char['Right Leg'],reanim['Right Leg'])
-create(char['Left Leg'],reanim['Left Leg'])
-
-m = plr:GetMouse()
-
-local LVecPart = Instance.new("Part", fl) LVecPart.CanCollide = false LVecPart.Transparency = 1
-
-te(ct,srv.RenderStepped:Connect(function()
-local lookVec = workspace.CurrentCamera.CFrame.lookVector
-local Root = reanim["HumanoidRootPart"]
-LVecPart.Position = Root.Position
-LVecPart.CFrame = CFrame.new(LVecPart.Position, Vector3.new(lookVec.X * 10000, lookVec.Y, lookVec.Z * 10000))
-end))
-
-wdown=false
-sdown=false
-adown=false
-ddown=false
-spacedown=false
-
---reanim.HumanoidRootPart.RootJoint.Part0=nil
-
-function flinger(p)
-f=Instance.new('BodyAngularVelocity',p)
-f.AngularVelocity = Vector3.new(9e9,9e9,9e9)
-f.MaxTorque=Vector3.new(9e9,9e9,9e9)
+	-- Made by Real_IceyDev (@lceyDex) --
+	-- Simple UI dragger (PC Only/Any device that has a mouse) --
+	
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
 end
-
-flinger(char.HumanoidRootPart)
-
-m=plr:GetMouse()
-
---char.HumanoidRootPart.Transparency = 0
-
-bp=Instance.new('BodyPosition',char.HumanoidRootPart)
-bp.P = 9e9
-bp.D = 9e9
-bp.MaxForce=Vector3.new(99999,99999,99999)
-
-local click
-
-te(ct,srv.Heartbeat:Connect(function()
-if click == true then
-bp.Position=m.Hit.p
-char.HumanoidRootPart.Position=m.Hit.p
-else
-bp.Position=reanim.Torso.Position
-char.HumanoidRootPart.Position=reanim.Torso.Position
-end
-end))
-
-local Highlight = Instance.new("SelectionBox")
-Highlight.Adornee = char.HumanoidRootPart
-Highlight.LineThickness=0.05
-Highlight.Color3 = Color3.fromRGB(30,255,30)
-Highlight.Parent = char.HumanoidRootPart
-Highlight.Name = "RAINBOW"
-
-hrp = Highlight
-
-spawn(function()
-while true do
-srv.Stepped:Wait()
-if ded then break end
-hrp.Color3 = Color3.new(255/255,0/255,0/255)
-for i = 0,255,10 do
-wait()
-hrp.Color3 = Color3.new(255/255,i/255,0/255)
-end
-for i = 255,0,-10 do
-wait()
-hrp.Color3 = Color3.new(i/255,255/255,0/255)
-end
-for i = 0,255,10 do
-wait()
-hrp.Color3 = Color3.new(0/255,255/255,i/255)
-end
-for i = 255,0,-10 do
-wait()
-hrp.Color3 = Color3.new(0/255,i/255,255/255)
-end
-for i = 0,255,10 do
-wait()
-hrp.Color3 = Color3.new(i/255,0/255,255/255)
-end
-for i = 255,0,-10 do
-wait()
-hrp.Color3 = Color3.new(255/255,0/255,i/255)
-end
-end
-end)
-
-te(ct,m.Button1Down:Connect(function()
-click=true
-end))
-
-te(ct,m.Button1Up:Connect(function()
-click=false
-end))
-
-te(ct,m.KeyDown:Connect(function(e)
-if e ==' ' then
-spacedown=true end
-if e =='w' then
-wdown=true end
-if e =='s' then
-sdown=true end
-if e =='a' then
-adown=true end
-if e =='d' then
-ddown=true
-end
-end))
-
-te(ct,m.KeyUp:Connect(function(e)
-if e ==' ' then
-spacedown=false end
-if e =='w' then
-wdown=false end
-if e =='s' then
-sdown=false end
-if e =='a' then
-adown=false end
-if e =='d' then
-ddown=false
-end
-end))
-
-local function MoveClone(X,Y,Z)
-LVecPart.CFrame = LVecPart.CFrame * CFrame.new(-X,Y,-Z)
-reanim.Humanoid.WalkToPoint = LVecPart.Position
-end
-
-te(ct,srv.RenderStepped:Connect(function()
-if wdown==true then
-MoveClone(0,0,1e4) end
-if sdown==true then
-MoveClone(0,0,-1e4) end
-if adown==true then
-MoveClone(1e4,0,0) end
-if ddown==true then
-MoveClone(-1e4,0,0)
-end
-if spacedown==true then
-reanim.Humanoid.Jump=true end
-if wdown ~= true and adown ~= true and sdown ~= true and ddown ~= true then
-reanim.Humanoid.WalkToPoint = reanim.HumanoidRootPart.Position end
-end))
-
---reanim.HumanoidRootPart.RootJoint.Part1=nil
-
-workspace.CurrentCamera.CameraSubject = reanim.Humanoid
-
-reset=Instance.new('BindableEvent')
-te(ct,reset.Event:Connect(function()
-reanim:Destroy()
-HumanDied=true
-reanimated=false
-for i,v in next, char:GetDescendants() do if v:IsA('BasePart') then v.Anchored=true end end
-hc=char.Humanoid:Clone()
-char.Humanoid:Destroy()
-hc.Parent=char
-game.Players:Chat('-re')
-for i,v in pairs(ct) do v:Disconnect() end
-game:GetService("StarterGui"):SetCore("ResetButtonCallback", true)
-reset:Remove()
-end))
-
-game:GetService("StarterGui"):SetCore("ResetButtonCallback", reset)
-
-notify('XyC','Olá, Lucas💖..')
+coroutine.wrap(NQSMJX_fake_script)()
