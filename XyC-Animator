@@ -3,901 +3,1451 @@
 
 -- Instances:
 
-local lol = Instance.new("ScreenGui")
-local botao = Instance.new("ImageButton")
-local ImageLabel = Instance.new("ImageLabel")
-local topbar = Instance.new("Frame")
-local TextLabel = Instance.new("TextLabel")
-local ui = Instance.new("Frame")
-local Anims = Instance.new("ScrollingFrame")
-local UIGridLayout = Instance.new("UIGridLayout")
-local Anim = Instance.new("TextButton")
+local bullet = Instance.new("ScreenGui")
+local exec = Instance.new("Frame")
+local topbar = Instance.new("TextLabel")
+local ImageButton = Instance.new("ImageButton")
+local TextBox = Instance.new("ScrollingFrame")
+local Lines = Instance.new("TextLabel")
+local UIListLayout = Instance.new("UIListLayout")
+local Source = Instance.new("TextBox")
+local Comments_ = Instance.new("TextLabel")
+local Vars_ = Instance.new("TextLabel")
+local Tokens_ = Instance.new("TextLabel")
+local Numbers_ = Instance.new("TextLabel")
+local Strings_ = Instance.new("TextLabel")
+local Keywords_ = Instance.new("TextLabel")
+local Globals_ = Instance.new("TextLabel")
+local fechar = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
-local Anim_2 = Instance.new("TextButton")
+local line = Instance.new("Frame")
+local navbar = Instance.new("Frame")
+local Executar = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+local Limpar = Instance.new("TextButton")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local UIPadding = Instance.new("UIPadding")
+local backdoored = Instance.new("Frame")
+local TOP = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local gamess = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local gam = Instance.new("Frame")
+local Frame = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
-local Anim_3 = Instance.new("TextButton")
+local title = Instance.new("TextLabel")
+local ImageLabel_3 = Instance.new("ImageLabel")
 local UICorner_3 = Instance.new("UICorner")
-local Anim_4 = Instance.new("TextButton")
+local ImageButton_2 = Instance.new("ImageButton")
 local UICorner_4 = Instance.new("UICorner")
-local Anim_5 = Instance.new("TextButton")
+local gam_2 = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
-local Anim_6 = Instance.new("TextButton")
+local title_2 = Instance.new("TextLabel")
+local ImageLabel_4 = Instance.new("ImageLabel")
 local UICorner_6 = Instance.new("UICorner")
-local Anim_7 = Instance.new("TextButton")
+local ImageButton_3 = Instance.new("ImageButton")
 local UICorner_7 = Instance.new("UICorner")
-local Anim_8 = Instance.new("TextButton")
+local gam_3 = Instance.new("Frame")
+local Frame_3 = Instance.new("Frame")
 local UICorner_8 = Instance.new("UICorner")
-local Anim_9 = Instance.new("TextButton")
+local title_3 = Instance.new("TextLabel")
+local ImageLabel_5 = Instance.new("ImageLabel")
 local UICorner_9 = Instance.new("UICorner")
-local Anim_10 = Instance.new("TextButton")
+local ImageButton_4 = Instance.new("ImageButton")
 local UICorner_10 = Instance.new("UICorner")
-local Anim_11 = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
-local Anim_12 = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
-local Anim_13 = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
+local ImageButton_5 = Instance.new("ImageButton")
 
 --Properties:
 
-lol.Name = "lol"
-lol.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-lol.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+bullet.Name = "bullet"
+bullet.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+bullet.Enabled = false
+bullet.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-botao.Name = "botao"
-botao.Parent = lol
-botao.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-botao.BackgroundTransparency = 1.000
-botao.BorderColor3 = Color3.fromRGB(0, 0, 0)
-botao.BorderSizePixel = 0
-botao.Position = UDim2.new(0.0225354228, 0, 0.857432723, 0)
-botao.Size = UDim2.new(0, 65, 0, 65)
-botao.Image = "http://www.roblox.com/asset/?id=101854654"
-botao.ImageColor3 = Color3.fromRGB(188, 255, 167)
+exec.Name = "exec"
+exec.Parent = bullet
+exec.AnchorPoint = Vector2.new(0.5, 0)
+exec.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+exec.BorderColor3 = Color3.fromRGB(0, 0, 0)
+exec.BorderSizePixel = 0
+exec.Position = UDim2.new(0.508607745, 0, 0.263349682, 0)
+exec.Size = UDim2.new(0, 587, 0, 338)
+exec.Visible = false
 
-ImageLabel.Parent = botao
+topbar.Name = "topbar"
+topbar.Parent = exec
+topbar.BackgroundColor3 = Color3.fromRGB(43, 43, 43)
+topbar.BackgroundTransparency = 1.000
+topbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+topbar.BorderSizePixel = 0
+topbar.Position = UDim2.new(0.226575807, 0, 0, 0)
+topbar.Size = UDim2.new(0, 321, 0, 28)
+topbar.Font = Enum.Font.Ubuntu
+topbar.Text = "Coquitel SS"
+topbar.TextColor3 = Color3.fromRGB(255, 255, 255)
+topbar.TextSize = 14.000
+
+ImageButton.Parent = topbar
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(-0.503904521, 0, -0.928571403, 0)
+ImageButton.Size = UDim2.new(0, 55, 0, 50)
+ImageButton.Image = "http://www.roblox.com/asset/?id=7120897383"
+
+TextBox.Name = "TextBox"
+TextBox.Parent = exec
+TextBox.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+TextBox.BorderColor3 = Color3.fromRGB(61, 61, 61)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0, 0, 0.082840234, 0)
+TextBox.Size = UDim2.new(0.999643981, 0, 0.843814492, 0)
+TextBox.ZIndex = 3
+TextBox.BottomImage = "rbxassetid://148970562"
+TextBox.CanvasSize = UDim2.new(0, 0, 0, 180)
+TextBox.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+TextBox.MidImage = "rbxassetid://148970562"
+TextBox.ScrollBarThickness = 5
+TextBox.TopImage = "rbxassetid://148970562"
+
+Lines.Name = "Lines"
+Lines.Parent = TextBox
+Lines.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Lines.BackgroundTransparency = 1.000
+Lines.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Lines.Size = UDim2.new(0.03232494, 0, 1, 0)
+Lines.ZIndex = 4
+Lines.Font = Enum.Font.Code
+Lines.Text = "1"
+Lines.TextColor3 = Color3.fromRGB(171, 171, 171)
+Lines.TextSize = 15.000
+Lines.TextYAlignment = Enum.TextYAlignment.Top
+
+UIListLayout.Parent = TextBox
+UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+
+Source.Name = "Source"
+Source.Parent = TextBox
+Source.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Source.BackgroundTransparency = 1.000
+Source.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Source.BorderSizePixel = 0
+Source.Position = UDim2.new(0.0323248655, 0, 0, 0)
+Source.Size = UDim2.new(0.965953171, 0, 1, 0)
+Source.ZIndex = 3
+Source.ClearTextOnFocus = false
+Source.Font = Enum.Font.Code
+Source.MultiLine = true
+Source.PlaceholderColor3 = Color3.fromRGB(204, 204, 204)
+Source.Text = "-- molotov the best cheater LOL\\n"
+Source.TextColor3 = Color3.fromRGB(204, 204, 204)
+Source.TextSize = 15.000
+Source.TextXAlignment = Enum.TextXAlignment.Left
+Source.TextYAlignment = Enum.TextYAlignment.Top
+
+Comments_.Name = "Comments_"
+Comments_.Parent = Source
+Comments_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Comments_.BackgroundTransparency = 1.000
+Comments_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Comments_.Size = UDim2.new(1, 0, 1, 0)
+Comments_.ZIndex = 5
+Comments_.Font = Enum.Font.Code
+Comments_.Text = "-- molotov the best cheater LOL"
+Comments_.TextColor3 = Color3.fromRGB(59, 200, 59)
+Comments_.TextSize = 15.000
+Comments_.TextXAlignment = Enum.TextXAlignment.Left
+Comments_.TextYAlignment = Enum.TextYAlignment.Top
+
+Vars_.Name = "Vars_"
+Vars_.Parent = Source
+Vars_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Vars_.BackgroundTransparency = 1.000
+Vars_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Vars_.Size = UDim2.new(1, 0, 1, 0)
+Vars_.ZIndex = 5
+Vars_.Font = Enum.Font.Code
+Vars_.Text = ""
+Vars_.TextColor3 = Color3.fromRGB(132, 214, 247)
+Vars_.TextSize = 15.000
+Vars_.TextXAlignment = Enum.TextXAlignment.Left
+Vars_.TextYAlignment = Enum.TextYAlignment.Top
+
+Tokens_.Name = "Tokens_"
+Tokens_.Parent = Source
+Tokens_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tokens_.BackgroundTransparency = 1.000
+Tokens_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Tokens_.Size = UDim2.new(1, 0, 1, 0)
+Tokens_.ZIndex = 5
+Tokens_.Font = Enum.Font.Code
+Tokens_.Text = ""
+Tokens_.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tokens_.TextSize = 15.000
+Tokens_.TextXAlignment = Enum.TextXAlignment.Left
+Tokens_.TextYAlignment = Enum.TextYAlignment.Top
+
+Numbers_.Name = "Numbers_"
+Numbers_.Parent = Source
+Numbers_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Numbers_.BackgroundTransparency = 1.000
+Numbers_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Numbers_.Size = UDim2.new(1, 0, 1, 0)
+Numbers_.ZIndex = 4
+Numbers_.Font = Enum.Font.Code
+Numbers_.Text = ""
+Numbers_.TextColor3 = Color3.fromRGB(255, 198, 0)
+Numbers_.TextSize = 15.000
+Numbers_.TextXAlignment = Enum.TextXAlignment.Left
+Numbers_.TextYAlignment = Enum.TextYAlignment.Top
+
+Strings_.Name = "Strings_"
+Strings_.Parent = Source
+Strings_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Strings_.BackgroundTransparency = 1.000
+Strings_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Strings_.Size = UDim2.new(1, 0, 1, 0)
+Strings_.ZIndex = 5
+Strings_.Font = Enum.Font.Code
+Strings_.Text = ""
+Strings_.TextColor3 = Color3.fromRGB(173, 241, 149)
+Strings_.TextSize = 15.000
+Strings_.TextXAlignment = Enum.TextXAlignment.Left
+Strings_.TextYAlignment = Enum.TextYAlignment.Top
+
+Keywords_.Name = "Keywords_"
+Keywords_.Parent = Source
+Keywords_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Keywords_.BackgroundTransparency = 1.000
+Keywords_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Keywords_.Size = UDim2.new(1, 0, 1, 0)
+Keywords_.ZIndex = 5
+Keywords_.Font = Enum.Font.Code
+Keywords_.Text = ""
+Keywords_.TextColor3 = Color3.fromRGB(248, 109, 124)
+Keywords_.TextSize = 15.000
+Keywords_.TextXAlignment = Enum.TextXAlignment.Left
+Keywords_.TextYAlignment = Enum.TextYAlignment.Top
+
+Globals_.Name = "Globals_"
+Globals_.Parent = Source
+Globals_.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Globals_.BackgroundTransparency = 1.000
+Globals_.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Globals_.Size = UDim2.new(1, 0, 1, 0)
+Globals_.ZIndex = 5
+Globals_.Font = Enum.Font.Code
+Globals_.Text = ""
+Globals_.TextColor3 = Color3.fromRGB(132, 214, 247)
+Globals_.TextSize = 15.000
+Globals_.TextXAlignment = Enum.TextXAlignment.Left
+Globals_.TextYAlignment = Enum.TextYAlignment.Top
+
+fechar.Name = "fechar"
+fechar.Parent = exec
+fechar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+fechar.BackgroundTransparency = 1.000
+fechar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fechar.BorderSizePixel = 0
+fechar.Position = UDim2.new(0.950850606, 0, 0.0193798449, 0)
+fechar.Size = UDim2.new(0, 19, 0, 18)
+fechar.Font = Enum.Font.Michroma
+fechar.Text = "X"
+fechar.TextColor3 = Color3.fromRGB(255, 255, 255)
+fechar.TextSize = 14.000
+fechar.TextStrokeColor3 = Color3.fromRGB(255, 0, 0)
+
+UICorner.Parent = exec
+
+line.Name = "line"
+line.Parent = exec
+line.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+line.BorderColor3 = Color3.fromRGB(0, 0, 0)
+line.BorderSizePixel = 0
+line.Position = UDim2.new(-0, 0, 0.0829999968, 0)
+line.Size = UDim2.new(0, 587, 0, 0)
+
+navbar.Name = "navbar"
+navbar.Parent = exec
+navbar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+navbar.BackgroundTransparency = 1.000
+navbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+navbar.BorderSizePixel = 0
+navbar.Position = UDim2.new(-5.19890584e-08, 0, 0.956240475, 0)
+navbar.Size = UDim2.new(0, 586, 0, 14)
+
+Executar.Name = "Executar"
+Executar.Parent = navbar
+Executar.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+Executar.BackgroundTransparency = 0.950
+Executar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Executar.BorderSizePixel = 0
+Executar.Position = UDim2.new(5.20777768e-08, 0, -0.714285731, 0)
+Executar.Size = UDim2.new(0, 102, 0, 24)
+Executar.Font = Enum.Font.Ubuntu
+Executar.Text = "Execute"
+Executar.TextColor3 = Color3.fromRGB(136, 136, 136)
+Executar.TextSize = 14.000
+Executar.TextWrapped = true
+
+ImageLabel.Parent = Executar
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BackgroundTransparency = 1.000
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel.BorderSizePixel = 0
-ImageLabel.Position = UDim2.new(-0.141870007, 0, -0.1422645, 0)
-ImageLabel.Size = UDim2.new(0, 83, 0, 82)
-ImageLabel.Image = "http://www.roblox.com/asset/?id=10131954007"
+ImageLabel.Position = UDim2.new(0.771264076, 0, 0, 0)
+ImageLabel.Size = UDim2.new(0, 21, 0, 24)
+ImageLabel.Image = "rbxassetid://12008449041"
+ImageLabel.ImageColor3 = Color3.fromRGB(136, 136, 136)
 
-topbar.Name = "topbar"
-topbar.Parent = lol
-topbar.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-topbar.BackgroundTransparency = 0.100
-topbar.BorderColor3 = Color3.fromRGB(0, 0, 0)
-topbar.BorderSizePixel = 0
-topbar.Position = UDim2.new(0.274251461, 0, 0.342762053, 0)
-topbar.Size = UDim2.new(0.425086409, 0, 0.0682196319, 0)
-topbar.Visible = false
+Limpar.Name = "Limpar"
+Limpar.Parent = navbar
+Limpar.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+Limpar.BackgroundTransparency = 0.950
+Limpar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Limpar.BorderSizePixel = 0
+Limpar.Position = UDim2.new(0.882252693, 0, -0.714285731, 0)
+Limpar.Size = UDim2.new(0, 68, 0, 24)
+Limpar.Font = Enum.Font.Unknown
+Limpar.Text = "Clear"
+Limpar.TextColor3 = Color3.fromRGB(136, 136, 136)
+Limpar.TextSize = 14.000
+Limpar.TextWrapped = true
+Limpar.TextXAlignment = Enum.TextXAlignment.Left
 
-TextLabel.Parent = topbar
+ImageLabel_2.Parent = Limpar
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.BackgroundTransparency = 1.000
+ImageLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_2.BorderSizePixel = 0
+ImageLabel_2.Position = UDim2.new(0.600301385, 0, 0, 0)
+ImageLabel_2.Size = UDim2.new(0, 22, 0, 24)
+ImageLabel_2.Image = "rbxassetid://16346922164"
+ImageLabel_2.ImageColor3 = Color3.fromRGB(136, 136, 136)
+
+UIPadding.Parent = exec
+
+backdoored.Name = "backdoored"
+backdoored.Parent = exec
+backdoored.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+backdoored.BackgroundTransparency = 0.800
+backdoored.BorderColor3 = Color3.fromRGB(0, 0, 0)
+backdoored.BorderSizePixel = 0
+backdoored.Position = UDim2.new(0.0562180057, 0, 0.082840234, 0)
+backdoored.Size = UDim2.new(0, 553, 0, 295)
+backdoored.Visible = false
+
+TOP.Name = "TOP"
+TOP.Parent = backdoored
+TOP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TOP.BackgroundTransparency = 0.950
+TOP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TOP.BorderSizePixel = 0
+TOP.Size = UDim2.new(1, 0, 0.0576271191, 0)
+
+TextLabel.Parent = TOP
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
-TextLabel.Position = UDim2.new(-8.61842366e-08, 0, 0, 0)
-TextLabel.Size = UDim2.new(1.00000012, 0, 0, 40)
-TextLabel.Font = Enum.Font.Highway
-TextLabel.Text = "lol anim SS"
+TextLabel.Size = UDim2.new(0, 99, 0, 17)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "    Backdoored games"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel.TextSize = 30.000
-TextLabel.TextWrapped = true
+TextLabel.TextSize = 10.000
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-ui.Name = "ui"
-ui.Parent = topbar
-ui.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
-ui.BackgroundTransparency = 0.100
-ui.BorderColor3 = Color3.fromRGB(0, 0, 0)
-ui.BorderSizePixel = 0
-ui.Position = UDim2.new(1.07431795e-07, 0, 0.981976748, 0)
-ui.Size = UDim2.new(0.998483419, 0, 6.56234217, 0)
+gamess.Name = "gamess"
+gamess.Parent = backdoored
+gamess.Active = true
+gamess.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+gamess.BackgroundTransparency = 1.000
+gamess.BorderColor3 = Color3.fromRGB(0, 0, 0)
+gamess.BorderSizePixel = 0
+gamess.Position = UDim2.new(0, 0, 0.0576271191, 0)
+gamess.Size = UDim2.new(0, 554, 0, 277)
+gamess.ScrollBarThickness = 5
 
-Anims.Name = "Anims"
-Anims.Parent = ui
-Anims.Active = true
-Anims.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Anims.BackgroundTransparency = 1.000
-Anims.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anims.BorderSizePixel = 0
-Anims.Position = UDim2.new(7.17299784e-08, 0, 0, 0)
-Anims.Size = UDim2.new(1.00151873, 0, 0.0364564881, 250)
-Anims.ScrollBarThickness = 0
+UIListLayout_2.Parent = gamess
+UIListLayout_2.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.Padding = UDim.new(0, 5)
 
-UIGridLayout.Parent = Anims
-UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIGridLayout.CellPadding = UDim2.new(0, 8, 0, 6)
-UIGridLayout.CellSize = UDim2.new(0, 80, 0, 70)
+gam.Name = "gam"
+gam.Parent = gamess
+gam.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+gam.BackgroundTransparency = 1.000
+gam.BorderColor3 = Color3.fromRGB(0, 0, 0)
+gam.BorderSizePixel = 0
+gam.Size = UDim2.new(0, 166, 0, 108)
 
-Anim.Name = "Anim"
-Anim.Parent = Anims
-Anim.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim.BorderSizePixel = 0
-Anim.Position = UDim2.new(0.212201595, 0, 0, 0)
-Anim.Size = UDim2.new(0, 75, 0, 84)
-Anim.Font = Enum.Font.Unknown
-Anim.Text = "Horror"
-Anim.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim.TextSize = 14.000
+Frame.Parent = gam
+Frame.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0421686731, 0, 0.0370370373, 0)
+Frame.Size = UDim2.new(0, 151, 0, 100)
 
-UICorner.Parent = Anim
+UICorner_2.Parent = Frame
 
-Anim_2.Name = "Anim"
-Anim_2.Parent = Anims
-Anim_2.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim_2.BorderSizePixel = 0
-Anim_2.Position = UDim2.new(0.212201595, 0, 0, 0)
-Anim_2.Size = UDim2.new(0, 75, 0, 84)
-Anim_2.Font = Enum.Font.Unknown
-Anim_2.Text = "Peter Parker"
-Anim_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim_2.TextSize = 14.000
+title.Name = "title"
+title.Parent = Frame
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1.000
+title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+title.BorderSizePixel = 0
+title.Position = UDim2.new(0.417218536, 0, 0.319999993, 0)
+title.Size = UDim2.new(0, 88, 0, 16)
+title.Font = Enum.Font.Ubuntu
+title.Text = "The Normal Elevator MODDED"
+title.TextColor3 = Color3.fromRGB(255, 234, 71)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextWrapped = true
 
-UICorner_2.Parent = Anim_2
+ImageLabel_3.Parent = title
+ImageLabel_3.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+ImageLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_3.BorderSizePixel = 0
+ImageLabel_3.Position = UDim2.new(-0.654941201, 0, -1.03966331, 0)
+ImageLabel_3.Size = UDim2.new(0, 57, 0, 57)
+ImageLabel_3.Image = "rbxassetid://85020903503211"
 
-Anim_3.Name = "Anim"
-Anim_3.Parent = Anims
-Anim_3.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim_3.BorderSizePixel = 0
-Anim_3.Position = UDim2.new(0.212201595, 0, 0, 0)
-Anim_3.Size = UDim2.new(0, 75, 0, 84)
-Anim_3.Font = Enum.Font.Unknown
-Anim_3.Text = "Clean Groove"
-Anim_3.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim_3.TextSize = 14.000
+UICorner_3.Parent = ImageLabel_3
 
-UICorner_3.Parent = Anim_3
+ImageButton_2.Parent = Frame
+ImageButton_2.BackgroundColor3 = Color3.fromRGB(109, 218, 103)
+ImageButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton_2.BorderSizePixel = 0
+ImageButton_2.Position = UDim2.new(0.165562913, 0, 0.790000021, 0)
+ImageButton_2.Size = UDim2.new(0, 101, 0, 15)
+ImageButton_2.Image = "rbxassetid://4458863290"
+ImageButton_2.ScaleType = Enum.ScaleType.Fit
 
-Anim_4.Name = "Anim"
-Anim_4.Parent = Anims
-Anim_4.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim_4.BorderSizePixel = 0
-Anim_4.Position = UDim2.new(0.212201595, 0, 0, 0)
-Anim_4.Size = UDim2.new(0, 75, 0, 84)
-Anim_4.Font = Enum.Font.Unknown
-Anim_4.Text = "Kazotsky Kick"
-Anim_4.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim_4.TextSize = 14.000
+UICorner_4.Parent = ImageButton_2
 
-UICorner_4.Parent = Anim_4
+gam_2.Name = "gam"
+gam_2.Parent = gamess
+gam_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+gam_2.BackgroundTransparency = 1.000
+gam_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+gam_2.BorderSizePixel = 0
+gam_2.Size = UDim2.new(0, 166, 0, 108)
 
-Anim_5.Name = "Anim"
-Anim_5.Parent = Anims
-Anim_5.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim_5.BorderSizePixel = 0
-Anim_5.Position = UDim2.new(0.212201595, 0, 0, 0)
-Anim_5.Size = UDim2.new(0, 75, 0, 84)
-Anim_5.Font = Enum.Font.Unknown
-Anim_5.Text = "Helicopter"
-Anim_5.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim_5.TextSize = 14.000
+Frame_2.Parent = gam_2
+Frame_2.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(0.0421686731, 0, 0.0370370373, 0)
+Frame_2.Size = UDim2.new(0, 151, 0, 100)
 
-UICorner_5.Parent = Anim_5
+UICorner_5.Parent = Frame_2
 
-Anim_6.Name = "Anim"
-Anim_6.Parent = Anims
-Anim_6.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim_6.BorderSizePixel = 0
-Anim_6.Position = UDim2.new(0.212201595, 0, 0, 0)
-Anim_6.Size = UDim2.new(0, 75, 0, 84)
-Anim_6.Font = Enum.Font.Unknown
-Anim_6.Text = "Loud Laugh"
-Anim_6.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim_6.TextSize = 14.000
+title_2.Name = "title"
+title_2.Parent = Frame_2
+title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title_2.BackgroundTransparency = 1.000
+title_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+title_2.BorderSizePixel = 0
+title_2.Position = UDim2.new(0.417218536, 0, 0.319999993, 0)
+title_2.Size = UDim2.new(0, 88, 0, 16)
+title_2.Font = Enum.Font.Ubuntu
+title_2.Text = "TNE MODDED test place"
+title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+title_2.TextScaled = true
+title_2.TextSize = 14.000
+title_2.TextWrapped = true
 
-UICorner_6.Parent = Anim_6
+ImageLabel_4.Parent = title_2
+ImageLabel_4.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+ImageLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_4.BorderSizePixel = 0
+ImageLabel_4.Position = UDim2.new(-0.654941201, 0, -1.03966331, 0)
+ImageLabel_4.Size = UDim2.new(0, 57, 0, 57)
+ImageLabel_4.Image = "rbxassetid://93409609354812"
 
-Anim_7.Name = "Anim"
-Anim_7.Parent = Anims
-Anim_7.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim_7.BorderSizePixel = 0
-Anim_7.Position = UDim2.new(0.212201595, 0, 0, 0)
-Anim_7.Size = UDim2.new(0, 75, 0, 84)
-Anim_7.Font = Enum.Font.Unknown
-Anim_7.Text = "PP Music"
-Anim_7.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim_7.TextSize = 14.000
+UICorner_6.Parent = ImageLabel_4
 
-UICorner_7.Parent = Anim_7
+ImageButton_3.Parent = Frame_2
+ImageButton_3.BackgroundColor3 = Color3.fromRGB(109, 218, 103)
+ImageButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton_3.BorderSizePixel = 0
+ImageButton_3.Position = UDim2.new(0.165562913, 0, 0.790000021, 0)
+ImageButton_3.Size = UDim2.new(0, 101, 0, 15)
+ImageButton_3.Image = "rbxassetid://4458863290"
+ImageButton_3.ScaleType = Enum.ScaleType.Fit
 
-Anim_8.Name = "Anim"
-Anim_8.Parent = Anims
-Anim_8.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim_8.BorderSizePixel = 0
-Anim_8.Position = UDim2.new(0.212201595, 0, 0, 0)
-Anim_8.Size = UDim2.new(0, 75, 0, 84)
-Anim_8.Font = Enum.Font.Unknown
-Anim_8.Text = "Basket Head"
-Anim_8.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim_8.TextSize = 14.000
+UICorner_7.Parent = ImageButton_3
 
-UICorner_8.Parent = Anim_8
+gam_3.Name = "gam"
+gam_3.Parent = gamess
+gam_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+gam_3.BackgroundTransparency = 1.000
+gam_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+gam_3.BorderSizePixel = 0
+gam_3.Size = UDim2.new(0, 166, 0, 108)
 
-Anim_9.Name = "Anim"
-Anim_9.Parent = Anims
-Anim_9.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim_9.BorderSizePixel = 0
-Anim_9.Position = UDim2.new(0.212201595, 0, 0, 0)
-Anim_9.Size = UDim2.new(0, 75, 0, 84)
-Anim_9.Font = Enum.Font.Unknown
-Anim_9.Text = "Floss"
-Anim_9.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim_9.TextSize = 14.000
+Frame_3.Parent = gam_3
+Frame_3.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Position = UDim2.new(0.0421686731, 0, 0.0370370373, 0)
+Frame_3.Size = UDim2.new(0, 151, 0, 100)
 
-UICorner_9.Parent = Anim_9
+UICorner_8.Parent = Frame_3
 
-Anim_10.Name = "Anim"
-Anim_10.Parent = Anims
-Anim_10.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim_10.BorderSizePixel = 0
-Anim_10.Position = UDim2.new(0.212201595, 0, 0, 0)
-Anim_10.Size = UDim2.new(0, 75, 0, 84)
-Anim_10.Font = Enum.Font.Unknown
-Anim_10.Text = "Hakari"
-Anim_10.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim_10.TextSize = 14.000
+title_3.Name = "title"
+title_3.Parent = Frame_3
+title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title_3.BackgroundTransparency = 1.000
+title_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+title_3.BorderSizePixel = 0
+title_3.Position = UDim2.new(0.417218536, 0, 0.319999993, 0)
+title_3.Size = UDim2.new(0, 88, 0, 16)
+title_3.Font = Enum.Font.Ubuntu
+title_3.Text = "amostradice LOL"
+title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+title_3.TextScaled = true
+title_3.TextSize = 5.000
+title_3.TextWrapped = true
 
-UICorner_10.Parent = Anim_10
+ImageLabel_5.Parent = title_3
+ImageLabel_5.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+ImageLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel_5.BorderSizePixel = 0
+ImageLabel_5.Position = UDim2.new(-0.654941201, 0, -1.03966331, 0)
+ImageLabel_5.Size = UDim2.new(0, 57, 0, 57)
+ImageLabel_5.Image = "http://www.roblox.com/asset/?id=4304318"
 
-Anim_11.Name = "Anim"
-Anim_11.Parent = Anims
-Anim_11.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim_11.BorderSizePixel = 0
-Anim_11.Position = UDim2.new(0.212201595, 0, 0, 0)
-Anim_11.Size = UDim2.new(0, 75, 0, 84)
-Anim_11.Font = Enum.Font.Unknown
-Anim_11.Text = "Default"
-Anim_11.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim_11.TextSize = 14.000
+UICorner_9.Parent = ImageLabel_5
 
-UICorner_11.Parent = Anim_11
+ImageButton_4.Parent = Frame_3
+ImageButton_4.BackgroundColor3 = Color3.fromRGB(109, 218, 103)
+ImageButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton_4.BorderSizePixel = 0
+ImageButton_4.Position = UDim2.new(0.165562913, 0, 0.790000021, 0)
+ImageButton_4.Size = UDim2.new(0, 101, 0, 15)
+ImageButton_4.Image = "rbxassetid://4458863290"
+ImageButton_4.ScaleType = Enum.ScaleType.Fit
 
-Anim_12.Name = "Anim"
-Anim_12.Parent = Anims
-Anim_12.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim_12.BorderSizePixel = 0
-Anim_12.Position = UDim2.new(0.212201595, 0, 0, 0)
-Anim_12.Size = UDim2.new(0, 75, 0, 84)
-Anim_12.Font = Enum.Font.Unknown
-Anim_12.Text = "DancePotion"
-Anim_12.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim_12.TextSize = 14.000
+UICorner_10.Parent = ImageButton_4
 
-UICorner_12.Parent = Anim_12
-
-Anim_13.Name = "Anim"
-Anim_13.Parent = Anims
-Anim_13.BackgroundColor3 = Color3.fromRGB(179, 179, 179)
-Anim_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Anim_13.BorderSizePixel = 0
-Anim_13.Size = UDim2.new(0, 75, 0, 84)
-Anim_13.Font = Enum.Font.Unknown
-Anim_13.Text = "TAKE THE L"
-Anim_13.TextColor3 = Color3.fromRGB(0, 0, 0)
-Anim_13.TextSize = 14.000
-
-UICorner_13.Parent = Anim_13
+ImageButton_5.Parent = bullet
+ImageButton_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton_5.BackgroundTransparency = 1.000
+ImageButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton_5.BorderSizePixel = 0
+ImageButton_5.Position = UDim2.new(0.474267989, 0, 0.0148750823, 0)
+ImageButton_5.Size = UDim2.new(0, 41, 0, 33)
+ImageButton_5.Image = "http://www.roblox.com/asset/?id=6869296322"
 
 -- Scripts:
 
-local function UUHYN_fake_script() -- botao.abrir 
-	local script = Instance.new('LocalScript', botao)
+local function XWNEQND_fake_script() -- TextBox.Main 
+	local script = Instance.new('LocalScript', TextBox)
 
-	local botao = script.Parent
-	local frame = script.Parent.Parent.topbar
+	local settings = {
+		Highlight = true; -- Highlight like you know. Script Text color?
+		Lines =true; -- The textbox will have some lines like when you press enter.
+		Scroll = true; -- So if it has alot of lines and that it gets off the screen this will help.
+		HighlightVariables=false;--Highlights the local and global enviorments
+		SplitScanLines=false;-- This trick is used to Scan lines instead of the whole source (Breaks multilined strings and comments) 
+		WaitIfRendered=true;-- This trick will reduce lag by waiting if the game has rendered
+		AutomaticSettingChange=true;--Automatically changes the settings for the best experience
+		LoadLexer=true;--Makes one token and creates highlights out of it instead of many tokens (reduce lag)
+	}
+	local RunService = game:GetService("RunService")
+	local Fps=0
+	local TimeFunction = RunService:IsRunning() and time or os.clock
 	
-	botao.MouseButton1Click:Connect(function()
-		-- Alterna a visibilidade do frame
-		frame.Visible = not frame.Visible
-	end)
+	local LastIteration, Start
+	local FrameUpdateTable = {}
 	
-end
-coroutine.wrap(UUHYN_fake_script)()
-local function AELAP_fake_script() -- botao.rodar 
-	local script = Instance.new('LocalScript', botao)
-
-	local image = script.Parent 
+	local function HeartbeatUpdate()
+		LastIteration = TimeFunction()
+		for Index = #FrameUpdateTable, 1, -1 do
+			FrameUpdateTable[Index + 1] = FrameUpdateTable[Index] >= LastIteration - 1 and FrameUpdateTable[Index] or nil
+		end
 	
-	local speedRodar = 0.9 -- valor personalizado 
-	
-	while true do 
-		image.Rotation = image.Rotation + speedRodar -- Aumenta a rotação da imagem
-		wait(0.09) -- Aguarda um pequeno intervalo antes de rotacionar novamente
+		FrameUpdateTable[1] = LastIteration
+		Fps = tonumber(math.floor(TimeFunction() - Start >= 1 and #FrameUpdateTable or #FrameUpdateTable / (TimeFunction() - Start)))
 	end
 	
-end
-coroutine.wrap(AELAP_fake_script)()
-local function JHGX_fake_script() -- ImageLabel.rodar 
-	local script = Instance.new('LocalScript', ImageLabel)
-
-	local image = script.Parent 
+	Start = TimeFunction()
+	RunService.Heartbeat:Connect(HeartbeatUpdate)
 	
-	local speedRodar = 1 -- valor personalizado 
+	--[==[
+	This syntax is the best syntax on the marketplace
+	Only created by MiAiHsIs1226
+	-- Credits
+	Credits to the lexer module creator
+	Credits to MikePetar for scroll
+	Credits to me for literally doing nothing
+	]==]
+	local function parse(tokens)
+		local localvarables = {}
+		local whitespacecharactersfound=0
+		local readabletokens = {}
+		local tokennumbers = {}
+		for i,v in pairs(tokens) do
+			if v.Source == " " then
+				whitespacecharactersfound+=1
+				continue
+			end
+			if v.Type=="space" then
+				whitespacecharactersfound+=1
+				continue
+			end
 	
-	while true do 
-		image.Rotation = image.Rotation + speedRodar -- Aumenta a rotação da imagem
-		wait(0.03) -- Aguarda um pequeno intervalo antes de rotacionar novamente
+			table.insert(readabletokens,v)
+			table.insert(tokennumbers,{i})
+		end
+	
+	
+		for i,v in pairs(readabletokens) do
+			pcall(function()
+				if v.Source == "local" then
+					local _,name =pcall(function()return readabletokens[i+1].Source;end)
+					if _==false then
+						error("Syntax Error: Expected more code")
+					end
+					if name == "function" then
+						_,name =pcall(function()return readabletokens[i+2].Source;end)
+						if _==false then
+							error("Syntax Error: Expected more code")
+						end
+						if readabletokens[i+2].Type~="iden" then
+							error("Syntax Error: Name isnt an idient")
+						end
+						table.insert(localvarables,{Name = name,Type="Local",Source = "function",number = tokennumbers[i][1]+4})
+					else
+						table.insert(localvarables,{Name = name,Type="Local",Source = readabletokens[i+3].Source,number = tokennumbers[i]
+							[1]+1})
+					end
+				elseif v.Type == "iden"  then
+	
+					if readabletokens[i-1] then
+						if readabletokens[i-1].Type ~= "keyword" and readabletokens[i-1].Type ~= "symbol"  then
+							local source = readabletokens[i+2].Source
+							table.insert(localvarables,{Name = v.Source,Type="Global",Source = source;number = tokennumbers[i]
+								[1]})  
+						elseif readabletokens[i-1].Source=="function" then
+							local source = "function"
+							table.insert(localvarables,{Name = v.Source,Type="Global",Source = source;number = tokennumbers[i]
+								[1]})  
+	
+						end
+					else
+						local source = readabletokens[i+2].Source
+						table.insert(localvarables,{Name = v.Source,Type="Global",Source = source,number = tokennumbers[i][1]})  
+					end
+				end
+			end)
+		end
+	
+		return (localvarables)
+	end
+	local function lexerscan(text)
+		local lexer = coroutine.wrap(function()
+	
+			local lexer = {}
+	
+			local yield, wrap  = coroutine.yield, coroutine.wrap
+			local strfind      = string.find
+			local strsub       = string.sub
+			local append       = table.insert
+			local type         = type
+	
+			local NUMBER1	= "^[%+%-]?%d+%.?%d*[eE][%+%-]?%d+"
+			local NUMBER2	= "^[%+%-]?%d+%.?%d*"
+			local NUMBER3	= "^0x[%da-fA-F]+"
+			local NUMBER4	= "^%d+%.?%d*[eE][%+%-]?%d+"
+			local NUMBER5	= "^%d+%.?%d*"
+			local IDEN		= "^[%a_][%w_]*"
+			local WSPACE	= "^%s+"
+			local STRING1	= "^(['\"])%1"							
+			local STRING2	= [[^(['"])(\*)%2%1]]
+			local STRING3	= [[^(['"]).-[^\](\*)%2%1]]
+			local STRING4	= "^(['\"]).-.*"						
+			local STRING5	= "^%[(=*)%[.-%]%1%]"					
+			local STRING6	= "^%[%[.-.*"							
+			local CHAR1		= "^''"
+			local CHAR2		= [[^'(\*)%1']]
+			local CHAR3		= [[^'.-[^\](\*)%1']]
+			local PREPRO	= "^#.-[^\\]\n"
+			local MCOMMENT1	= "^%-%-%[(=*)%[.-%]%1%]"				
+			local MCOMMENT2	= "^%-%-%[%[.-.*"						
+			local SCOMMENT1	= "^%-%-.-\n"							
+			local SCOMMENT2	= "^%-%-.-.*"							
+	
+			local lua_keyword = {
+				["and"] = true,  ["break"] = true,  ["do"] = true,      ["else"] = true,      ["elseif"] = true,
+				["end"] = true,  ["false"] = true,  ["for"] = true,     ["function"] = true,  ["if"] = true,
+				["in"] = true,   ["local"] = true,  ["nil"] = true,     ["not"] = true,       ["while"] = true,
+				["or"] = true,   ["repeat"] = true, ["return"] = true,  ["then"] = true,      ["true"] = true,
+				["self"] = true, ["until"] = true
+			}
+	
+			local lua_builtin = {
+				["assert"] = true;["collectgarbage"] = true;["error"] = true;["_G"] = true;
+				["gcinfo"] = true;["getfenv"] = true;["getmetatable"] = true;["ipairs"] = true;
+				["loadstring"] = true;["newproxy"] = true;["next"] = true;["pairs"] = true;
+				["pcall"] = true;["print"] = true;["rawequal"] = true;["rawget"] = true;["rawset"] = true;
+				["select"] = true;["setfenv"] = true;["setmetatable"] = true;["tonumber"] = true;
+				["tostring"] = true;["type"] = true;["unpack"] = true;["_VERSION"] = true;["xpcall"] = true;
+				["delay"] = true;["elapsedTime"] = true;["require"] = true;["spawn"] = true;["tick"] = true;
+				["time"] = true;["typeof"] = true;["UserSettings"] = true;["wait"] = true;["warn"] = true;
+				["game"] = true;["Enum"] = true;["script"] = true;["shared"] = true;["workspace"] = true;
+				["Axes"] = true;["BrickColor"] = true;["CFrame"] = true;["Color3"] = true;["ColorSequence"] = true;
+				["ColorSequenceKeypoint"] = true;["Faces"] = true;["Instance"] = true;["NumberRange"] = true;
+				["NumberSequence"] = true;["NumberSequenceKeypoint"] = true;["PhysicalProperties"] = true;
+				["Random"] = true;["Ray"] = true;["Rect"] = true;["Region3"] = true;["Region3int16"] = true;
+				["TweenInfo"] = true;["UDim"] = true;["UDim2"] = true;["Vector2"] = true;["Vector3"] = true;
+				["Vector3int16"] = true;["next"] = true;
+				["os"] = true;
+				["os.time"] = true;["os.date"] = true;["os.difftime"] = true;
+				["debug"] = true;
+				["debug.traceback"] = true;["debug.profilebegin"] = true;["debug.profileend"] = true;
+				["math"] = true;
+				["math.abs"] = true;["math.acos"] = true;["math.asin"] = true;["math.atan"] = true;["math.atan2"] = true;["math.ceil"] = true;["math.clamp"] = true;["math.cos"] = true;["math.cosh"] = true;["math.deg"] = true;["math.exp"] = true;["math.floor"] = true;["math.fmod"] = true;["math.frexp"] = true;["math.ldexp"] = true;["math.log"] = true;["math.log10"] = true;["math.max"] = true;["math.min"] = true;["math.modf"] = true;["math.noise"] = true;["math.pow"] = true;["math.rad"] = true;["math.random"] = true;["math.randomseed"] = true;["math.sign"] = true;["math.sin"] = true;["math.sinh"] = true;["math.sqrt"] = true;["math.tan"] = true;["math.tanh"] = true;
+				["coroutine"] = true;
+				["coroutine.create"] = true;["coroutine.resume"] = true;["coroutine.running"] = true;["coroutine.status"] = true;["coroutine.wrap"] = true;["coroutine.yield"] = true;
+				["string"] = true;
+				["string.byte"] = true;["string.char"] = true;["string.dump"] = true;["string.find"] = true;["string.format"] = true;["string.len"] = true;["string.lower"] = true;["string.match"] = true;["string.rep"] = true;["string.reverse"] = true;["string.sub"] = true;["string.upper"] = true;["string.gmatch"] = true;["string.gsub"] = true;
+				["table"] = true;
+				["table.concat"] = true;["table.insert"] = true;["table.remove"] = true;["table.sort"] = true;
+			}
+	
+			local function tdump(tok)
+				return yield(tok, tok)
+			end
+	
+			local function ndump(tok)
+				return yield("number", tok)
+			end
+	
+			local function sdump(tok)
+				return yield("string", tok)
+			end
+	
+			local function cdump(tok)
+				return yield("comment", tok)
+			end
+	
+			local function wsdump(tok)
+				return yield("space", tok)
+			end
+	
+			local function lua_vdump(tok)
+				if (lua_keyword[tok]) then
+					return yield("keyword", tok)
+				elseif (lua_builtin[tok]) then
+					return yield("builtin", tok)
+				else
+					return yield("iden", tok)
+				end
+			end
+	
+			local lua_matches = {
+				{IDEN,      lua_vdump},        -- Indentifiers
+				{WSPACE,    wsdump},           -- Whitespace
+				{NUMBER3,   ndump},            -- Numbers
+				{NUMBER4,   ndump},
+				{NUMBER5,   ndump},
+				{STRING1,   sdump},            -- Strings
+				{STRING2,   sdump},
+				{STRING3,   sdump},
+				{STRING4,   sdump},
+				{STRING5,   sdump},            -- Multiline-Strings
+				{STRING6,   sdump},            -- Multiline-Strings
+	
+				{MCOMMENT1, cdump},            -- Multiline-Comments
+				{MCOMMENT2, cdump},			
+				{SCOMMENT1, cdump},            -- Singleline-Comments
+				{SCOMMENT2, cdump},
+	
+				{"^==",     tdump},            -- Operators
+				{"^~=",     tdump},
+				{"^<=",     tdump},
+				{"^>=",     tdump},
+				{"^%.%.%.", tdump},
+				{"^%.%.",   tdump},
+				{"^.",      tdump}
+			}
+	
+			local num_lua_matches = #lua_matches
+	
+	
+			--- Create a plain token iterator from a string.
+			-- @tparam string s a string.
+			function lexer.scan(s)
+	
+				local function lex(first_arg)
+	
+					local line_nr = 0
+					local sz = #s
+					local idx = 1
+	
+					-- res is the value used to resume the coroutine.
+					local function handle_requests(res)
+						while (res) do
+							local tp = type(res)
+							-- Insert a token list:
+							if (tp == "table") then
+								res = yield("", "")
+								for i = 1,#res do
+									local t = res[i]
+									res = yield(t[1], t[2])
+								end
+							elseif (tp == "string") then -- Or search up to some special pattern:
+								local i1, i2 = strfind(s, res, idx)
+								if (i1) then
+									local tok = strsub(s, i1, i2)
+									idx = (i2 + 1)
+									res = yield("", tok)
+								else
+									res = yield("", "")
+									idx = (sz + 1)
+								end
+							else
+								res = yield(line_nr, idx)
+							end
+						end
+					end
+	
+					handle_requests(first_arg)
+					line_nr = 1
+	
+					while (true) do
+	
+						if (idx > sz) then
+							while (true) do
+								handle_requests(yield())
+							end
+						end
+	
+						for i = 1,num_lua_matches do
+							local m = lua_matches[i]
+							local pat = m[1]
+							local fun = m[2]
+							local findres = {strfind(s, pat, idx)}
+							local i1, i2 = findres[1], findres[2]
+							if (i1) then
+								local tok = strsub(s, i1, i2)
+								idx = (i2 + 1)
+								lexer.finished = (idx > sz)
+								local res = fun(tok, findres)
+								if (tok:find("\n")) then
+									-- Update line number:
+									local _,newlines = tok:gsub("\n", {})
+									line_nr = (line_nr + newlines)
+								end
+								handle_requests(res)
+								break
+							end
+						end
+	
+					end
+	
+				end
+	
+				return wrap(lex)
+	
+			end
+	
+			return lexer
+		end)()
+		local function doesvalueexist(value,tab)
+			for i,v in pairs(tab) do
+				if v == value then
+					return true
+				end
+			end
+			return false or nil
+		end
+		local symbols = {
+			";";
+			"^";
+			"(";
+			")";
+			"%";
+			"/";
+			":";
+			"#";
+			"-";
+			"=";
+			"+";
+			"{";
+			"}";
+			"~";
+			"<";
+			">";
+			"*";
+			",";
+			".";
+			"\""}
+		local t={}
+		local split=text:split("\n")
+		if settings.SplitScanLines==true then
+			for _, splitv in pairs(text:split("\n")) do 
+				for i,v in (lexer.scan(splitv)) do
+					local type= i
+					if doesvalueexist(type,symbols)  then-- makes the type "symbol" if it is a symbol
+						type="symbol"
+					end
+					table.insert(t,{Type=type,Source=v})
+				end
+				table.insert(t,{Type="space",Source="\n"})--dont remove this unless you know what you're doing
+				if settings.WaitIfRendered then
+					game:GetService("RunService").RenderStepped:Wait()
+				end
+			end
+		else
+	
+			for i,v in (lexer.scan(text)) do
+				local type= i
+				if doesvalueexist(type,symbols)  then-- makes the type "symbol" if it is a symbol
+					type="symbol"
+				end
+				table.insert(t,{Type=type,Source=v})
+				if settings.WaitIfRendered then
+					game:GetService("RunService").RenderStepped:Wait()
+				end
+			end
+	
+	
+	
+		end
+		return(t)
+	end
+	local GetTypeToMakeSyntax=function(s,t)
+		if type(s)=="string" then
+			if t=="var" then
+				local tokens=lexerscan(s)
+				local r=""
+				local variables=parse(tokens)
+				local s={}
+				for i,v in pairs(variables) do
+					s[v.Name]=v
+				end
+				for i,v in pairs(tokens) do
+					if s[v.Source] then
+						if tokens[i-1] then
+							if tokens[i-1].Source~="." then
+								r=r..v.Source
+							else
+								continue
+							end
+						else
+							r=r..v.Source
+						end
+					else
+						local s=string.gsub(v.Source,"%d",function(c)return string.rep(" ",#c)end)
+						local p=string.gsub(s,"%p",function(c)return string.rep(" ",#c)end)
+						local a=string.gsub(p,"%a",function(c)return string.rep(" ",#c)end)
+						r=r..a
+					end
+				end
+	
+				return(r)
+			else
+				local tokens=lexerscan(s)
+				local r=""
+				for i,v in pairs(tokens) do
+					if v.Type==t then
+						r=r..v.Source
+					else
+						local s=string.gsub(v.Source,"%d",function(c)return string.rep(" ",#c)end)
+						local p=string.gsub(s,"%p",function(c)return string.rep(" ",#c)end)
+						local a=string.gsub(p,"%a",function(c)return string.rep(" ",#c)end)
+						r=r..a
+					end
+				end
+	
+				return(r)
+			end
+		elseif type(s)=="table" then
+			if t=="var" then
+				local tokens=s
+				local r=""
+				local variables=parse(tokens)
+				local s={}
+				for i,v in pairs(variables) do
+					s[v.Name]=v
+				end
+				for i,v in pairs(tokens) do
+					if s[v.Source] then
+						if tokens[i-1] then
+							if tokens[i-1].Source~="." then
+								r=r..v.Source
+							else
+								continue
+							end
+						else
+							r=r..v.Source
+						end
+					else
+						local s=string.gsub(v.Source,"%d",function(c)return string.rep(" ",#c)end)
+						local p=string.gsub(s,"%p",function(c)return string.rep(" ",#c)end)
+						local a=string.gsub(p,"%a",function(c)return string.rep(" ",#c)end)
+						r=r..a
+					end
+				end
+	
+				return(r)
+			else
+				local tokens=s
+				local r=""
+				for i,v in pairs(tokens) do
+					if v.Type==t then
+						r=r..v.Source
+					else
+						local s=string.gsub(v.Source,"%d",function(c)return string.rep(" ",#c)end)
+						local p=string.gsub(s,"%p",function(c)return string.rep(" ",#c)end)
+						local a=string.gsub(p,"%a",function(c)return string.rep(" ",#c)end)
+						r=r..a
+					end
+				end
+	
+				return(r)
+			end
+		end
 	end
 	
-end
-coroutine.wrap(JHGX_fake_script)()
-local function DDFE_fake_script() -- Anim.LocalScript 
-	local script = Instance.new('LocalScript', Anim)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://76361383590591"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
+	local L_1_ = script.Parent.Source
+	local L_2_ = Vector2.new(0, 0)  
+	local L_3_Org = {      "getrawmetatable",       "game",       "workspace",       "script",       "math",       "string",       "table",       "print",       "wait",       "BrickColor",       "Color3",       "next",       "pairs",       "ipairs",       "select",       "unpack",       "Instance",       "Vector2",       "Vector3",       "CFrame",       "Ray",       "UDim2",       "Enum",       "assert",       "error",       "warn",       "tick",       "loadstring",       "_G",       "shared",       "getfenv",       "setfenv",       "newproxy",       "setmetatable",       "getmetatable",       "os",       "debug",       "pcall",       "ypcall",       "xpcall",       "rawequal",       "rawset",       "rawget",       "tonumber",       "tostring",       "type",       "typeof",       "_VERSION",       "coroutine",       "delay",       "require",       "spawn",       "LoadLibrary",       "settings",       "stats",       "time",       "UserSettings",       "version",       "Axes",       "ColorSequence",       "Faces",       "ColorSequenceKeypoint",       "NumberRange",       "NumberSequence",       "NumberSequenceKeypoint",       "gcinfo",       "elapsedTime",       "collectgarbage",       "PhysicalProperties",       "Rect",       "Region3",       "Region3int16",       "UDim",       "Vector2int16",       "Vector3int16" } 
+	local L_3_ = {      "getrawmetatable",       "game",       "workspace",       "script",       "math",       "string",       "table",       "print",       "wait",       "BrickColor",       "Color3",       "next",       "pairs",       "ipairs",       "select",       "unpack",       "Instance",       "Vector2",       "Vector3",       "CFrame",       "Ray",       "UDim2",       "Enum",       "assert",       "error",       "warn",       "tick",       "loadstring",       "_G",       "shared",       "getfenv",       "setfenv",       "newproxy",       "setmetatable",       "getmetatable",       "os",       "debug",       "pcall",       "ypcall",       "xpcall",       "rawequal",       "rawset",       "rawget",       "tonumber",       "tostring",       "type",       "typeof",       "_VERSION",       "coroutine",       "delay",       "require",       "spawn",       "LoadLibrary",       "settings",       "stats",       "time",       "UserSettings",       "version",       "Axes",       "ColorSequence",       "Faces",       "ColorSequenceKeypoint",       "NumberRange",       "NumberSequence",       "NumberSequenceKeypoint",       "gcinfo",       "elapsedTime",       "collectgarbage",       "PhysicalProperties",       "Rect",       "Region3",       "Region3int16",       "UDim",       "Vector2int16",       "Vector3int16" } 
+	local L_4_ = {       "and",       "break",       "do",       "else",       "elseif",       "end",       "false",       "for",       "function",       "goto",       "if",       "in",       "local",       "nil",       "not",       "or",       "repeat",       "return",       "then",       "true",       "until",       "while" } 
 	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
+	local function L_5_func(L_49_arg1)       
+		local L_50_, L_51_ = L_49_arg1.CanvasSize.Y.Offset, L_49_arg1.AbsoluteWindowSize.Y       
+		local L_52_ = L_50_ - L_51_       
+		if L_52_ < 0 then             
+			L_52_ = 0
+		end       
+		local L_53_ = Vector2.new(L_49_arg1.CanvasPosition.X, L_52_)       
+		return L_53_ 
+	end 
+	local function ofodguisgfhjjksfghkgh(L_49_arg1)       
+		local L_50_, L_51_ = L_49_arg1.CanvasSize.X.Offset, L_49_arg1.AbsoluteWindowSize.X       
+		local L_52_ = L_50_ - L_51_       
+		if L_52_ < 0 then             
+			L_52_ = 0
+		end       
+		local L_53_ = Vector2.new(L_52_,L_49_arg1.CanvasPosition.Y)       
+		return L_53_ 
+	end 
+	local function GetLineSelected(s)
+		local text =  s.Text
+		local p = s.CursorPosition
+		local text2 = ""
+		for i = p,1,-1 do
+			local c = text:sub(i,i)
+			if c == "\n" then
+				break
+			else
+				text2 = text2 .. c
 			end
 		end
-	end)
 	
-end
-coroutine.wrap(DDFE_fake_script)()
-local function VAAPJAS_fake_script() -- Anim_2.LocalScript 
-	local script = Instance.new('LocalScript', Anim_2)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://97250709692612"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
-	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(VAAPJAS_fake_script)()
-local function QTVEH_fake_script() -- Anim_3.LocalScript 
-	local script = Instance.new('LocalScript', Anim_3)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://72755165836017"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
-	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação em loop
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()  -- Começa a animação
-	
-					-- Garantir que a animação continue em loop
-					currentAnimation.Looped = true  -- Define para rodar em loop
-	
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(QTVEH_fake_script)()
-local function TTQJYC_fake_script() -- Anim_4.LocalScript 
-	local script = Instance.new('LocalScript', Anim_4)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://78563542070110"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
-	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação em loop
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()  -- Começa a animação
-	
-					-- Garantir que a animação continue em loop
-					currentAnimation.Looped = true  -- Define para rodar em loop
-	
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(TTQJYC_fake_script)()
-local function IBVM_fake_script() -- Anim_5.LocalScript 
-	local script = Instance.new('LocalScript', Anim_5)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://110495667908099"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
-	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação em loop
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()  -- Começa a animação
-	
-					-- Garantir que a animação continue em loop
-					currentAnimation.Looped = true  -- Define para rodar em loop
-	
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(IBVM_fake_script)()
-local function HLYM_fake_script() -- Anim_6.LocalScript 
-	local script = Instance.new('LocalScript', Anim_6)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://111066132694288"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
-	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação em loop
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()  -- Começa a animação
-	
-					-- Garantir que a animação continue em loop
-					currentAnimation.Looped = true  -- Define para rodar em loop
-	
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(HLYM_fake_script)()
-local function ALYGS_fake_script() -- Anim_7.LocalScript 
-	local script = Instance.new('LocalScript', Anim_7)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://139815615103349"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
-	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(ALYGS_fake_script)()
-local function ZNWZ_fake_script() -- Anim_8.LocalScript 
-	local script = Instance.new('LocalScript', Anim_8)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://72200145487150"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
-	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(ZNWZ_fake_script)()
-local function QYOMLQS_fake_script() -- Anim_9.LocalScript 
-	local script = Instance.new('LocalScript', Anim_9)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://100264003823888"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
-	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(QYOMLQS_fake_script)()
-local function XWSR_fake_script() -- Anim_10.LocalScript 
-	local script = Instance.new('LocalScript', Anim_10)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://102290865924122"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
-	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(XWSR_fake_script)()
-local function FLPA_fake_script() -- Anim_11.LocalScript 
-	local script = Instance.new('LocalScript', Anim_11)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://82634187050716"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
-	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(FLPA_fake_script)()
-local function OUWCA_fake_script() -- Anim_12.LocalScript 
-	local script = Instance.new('LocalScript', Anim_12)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://35654637"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
-	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(OUWCA_fake_script)()
-local function QVNNDEM_fake_script() -- Anim_13.LocalScript 
-	local script = Instance.new('LocalScript', Anim_13)
-
-	local button = script.Parent  -- Supondo que o botão esteja no mesmo script
-	local animationId = "rbxassetid://78524326419130"  -- Substitua com o ID da animação desejada
-	local isOn = false  -- Variável para controlar o estado do botão (ON/OFF)
-	local currentAnimation = nil  -- Variável para armazenar a animação atual
-	
-	button.MouseButton1Click:Connect(function()
-		isOn = not isOn  -- Alterna o estado ON/OFF
-	
-		local character = game.Players.LocalPlayer.Character
-		if character then
-			local humanoid = character:FindFirstChildOfClass("Humanoid")
-			if humanoid then
-				if isOn then
-					-- Mudar a cor do botão para verde quando ON
-					button.BackgroundColor3 = Color3.fromRGB(0, 193, 0)
-	
-					-- Tocar a animação
-					local animation = Instance.new("Animation")
-					animation.AnimationId = animationId
-					currentAnimation = humanoid:LoadAnimation(animation)
-					currentAnimation:Play()
-				else
-					-- Mudar a cor do botão para branco quando OFF
-					button.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
-	
-					-- Parar a animação
-					if currentAnimation then
-						currentAnimation:Stop()
-					end
-				end
-			end
-		end
-	end)
-	
-end
-coroutine.wrap(QVNNDEM_fake_script)()
-local function NQSMJX_fake_script() -- topbar.UIDrag 
-	local script = Instance.new('LocalScript', topbar)
-
-	-- Made by Real_IceyDev (@lceyDex) --
-	-- Simple UI dragger (PC Only/Any device that has a mouse) --
-	
-	local UIS = game:GetService('UserInputService')
-	local frame = script.Parent
-	local dragToggle = nil
-	local dragSpeed = 0.25
-	local dragStart = nil
-	local startPos = nil
-	
-	local function updateInput(input)
-		local delta = input.Position - dragStart
-		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+		return (text2:reverse())
 	end
 	
-	frame.InputBegan:Connect(function(input)
-		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
-			dragToggle = true
+	wait(.2) 
+	local L_6_ = 20 
+	L_1_:GetPropertyChangedSignal("Text"):Connect(function()
+		if settings.Highlight then
+			local L_54_ = L_1_.Comments_       
+			local L_56_ = L_1_.Tokens_       
+			local L_57_ = L_1_.Numbers_       
+			local L_58_ = L_1_.Strings_             
+			local L_61_ = L_1_.Keywords_       
+			local L_62_ = L_1_.Globals_  
+			local L_90_ = L_1_.Vars_  
+			if settings.LoadLexer then
+				local tokens= lexerscan(L_1_.Text) 
+				L_54_.Text=GetTypeToMakeSyntax(tokens,"comment")
+	
+				L_58_.Text=GetTypeToMakeSyntax(tokens,"string")
+	
+				L_57_.Text=GetTypeToMakeSyntax(tokens,"number")
+	
+				L_62_.Text=GetTypeToMakeSyntax(tokens,"builtin")
+	
+				L_56_.Text=GetTypeToMakeSyntax(tokens,"symbol")
+	
+				L_61_.Text=GetTypeToMakeSyntax(tokens,"keyword")
+	
+				if settings.HighlightVariables then
+					L_90_.Text=GetTypeToMakeSyntax(tokens,"var")
+				end
+	
+			else
+				spawn(function()
+					L_54_.Text=GetTypeToMakeSyntax(L_1_.Text,"comment")
+				end)
+				spawn(function()
+					L_58_.Text=GetTypeToMakeSyntax(L_1_.Text,"string")
+				end)
+				spawn(function()
+					L_57_.Text=GetTypeToMakeSyntax(L_1_.Text,"number")
+				end)
+				spawn(function()
+					L_62_.Text=GetTypeToMakeSyntax(L_1_.Text,"builtin")
+				end)
+				spawn(function()
+					L_56_.Text=GetTypeToMakeSyntax(L_1_.Text,"symbol")
+				end)
+				spawn(function()
+					L_61_.Text=GetTypeToMakeSyntax(L_1_.Text,"keyword")
+				end)
+				spawn(function()
+					if settings.HighlightVariables then
+						L_90_.Text=GetTypeToMakeSyntax(L_1_.Text,"var")
+					end
+				end)
+	
+			end
+		end
+		local L_63_ = 1    
+		if settings.Scroll then
+			local X = L_1_.TextBounds.X
+			L_1_.Parent.CanvasSize = (UDim2.new(0, L_1_.TextBounds.X + 55 + 5, 0, L_1_.TextBounds.Y))   
+		end
+		if settings.Lines then
+			L_1_.Text:gsub('\n', function()             
+				L_63_ = L_63_ + 1       end)      
+			L_1_.Parent.Lines.Text = ""       
+			for L_64_forvar1 = 1, L_63_ do             
+				L_1_.Parent.Lines.Text = L_1_.Parent.Lines.Text..L_64_forvar1.."\n"       
+			end       
+		end
+		if settings.Scroll then
+			spawn(function()
+				if L_1_.Parent.CanvasPosition.X == L_2_.X then
+					L_1_.Parent.CanvasPosition = ofodguisgfhjjksfghkgh(L_1_.Parent)  
+				else             
+					L_2_ = ofodguisgfhjjksfghkgh(L_1_.Parent)   
+				end 
+			end)
+			wait()
+			if L_1_.Text:sub(#L_1_.Text,#L_1_.Text) == "\n" then
+				L_1_.Parent.CanvasPosition = Vector2.new()
+			end
+	
+			if L_1_.Parent.CanvasPosition.Y == L_2_.Y then
+				L_1_.Parent.CanvasPosition = L_5_func(L_1_.Parent)       
+			else             
+				L_2_ = L_5_func(L_1_.Parent)       
+			end 
+		end
+	
+	
+	
+	end) 
+	if settings.Scroll then
+		L_1_.MouseWheelBackward:Connect(function(L_65_arg1, L_66_arg2)       
+			wait(.1)      
+			game.TweenService:Create(L_1_.Parent, TweenInfo.new(.5, Enum.EasingStyle.Quint), {CanvasPosition = L_1_.Parent.CanvasPosition + Vector2.new(0, L_6_)}):Play()
+			L_6_ = L_6_ + 5       
+			wait(1)       
+			L_6_ = L_6_ - 5 	
+		end) 
+		L_1_.MouseWheelForward:Connect(function(L_67_arg1, L_68_arg2)    
+			wait(.1)      
+			game.TweenService:Create(L_1_.Parent, TweenInfo.new(.5, Enum.EasingStyle.Quint), {CanvasPosition = L_1_.Parent.CanvasPosition + Vector2.new(0,-L_6_)}):Play()
+			L_6_ = L_6_ + 5       
+			wait(1)       
+			L_6_ = L_6_ - 5 
+		end)
+	end
+	if settings.Lines then
+		script.Parent.Lines.Visible = true
+		L_1_.Position = UDim2.new(0,30,0,0)
+	else
+		L_1_.Position = UDim2.new()
+	end
+	if settings.AutomaticSettingChange== true then
+		
+		spawn(function()
+			pcall(function()
+				while wait(10) do
+					settings.Highlight=true
+					if Fps>50 then
+						settings.SplitScanLines=false
+						settings.LoadLexer=false
+						settings.WaitIfRendered=false
+						
+					elseif Fps<60 and Fps>40 then
+						settings.SplitScanLines=false
+						settings.LoadLexer=true
+						settings.WaitIfRendered=true
+						settings.HighlightVariables=false
+						
+					elseif Fps<35 then
+						settings.SplitScanLines=true
+						settings.LoadLexer=true
+						settings.WaitIfRendered=true
+						settings.HighlightVariables=false
+						
+					elseif Fps>10 then
+						settings.Highlight=false
+					end
+				end
+			end)
+		end)
+	end
+end
+coroutine.wrap(XWNEQND_fake_script)()
+local function SWLUV_fake_script() -- fechar.LocalScript 
+	local script = Instance.new('LocalScript', fechar)
+
+	local button = script.Parent
+	button.MouseButton1Click:Connect(function() 
+			script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(SWLUV_fake_script)()
+local function QPIAV_fake_script() -- Executar.execute 
+	local script = Instance.new('LocalScript', Executar)
+
+	local remote = game.ReplicatedStorage.Remotes.ez
+	local code = script.Parent.Parent.Parent.TextBox.Source
+	local player = game.Players.LocalPlayer
+	local name = script.Parent.Parent.Parent.Parent.Name
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		remote:FireServer(code.Text, player, name)
+	end)
+end
+coroutine.wrap(QPIAV_fake_script)()
+local function CJRWZS_fake_script() -- Limpar.clear 
+	local script = Instance.new('LocalScript', Limpar)
+
+	local code = script.Parent.Parent.Parent.TextBox.Source
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		code.Text = ""
+	end)
+end
+coroutine.wrap(CJRWZS_fake_script)()
+local function ZEXZ_fake_script() -- exec.Smooth GUI Dragging 
+	local script = Instance.new('LocalScript', exec)
+
+	local UserInputService = game:GetService("UserInputService")
+	local runService = (game:GetService("RunService"));
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	function Lerp(a, b, m)
+		return a + (b - a) * m
+	end;
+	
+	local lastMousePos
+	local lastGoalPos
+	local DRAG_SPEED = (8); -- // The speed of the UI darg.
+	function Update(dt)
+		if not (startPos) then return end;
+		if not (dragging) and (lastGoalPos) then
+			gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+			return 
+		end;
+	
+		local delta = (lastMousePos - UserInputService:GetMouseLocation())
+		local xGoal = (startPos.X.Offset - delta.X);
+		local yGoal = (startPos.Y.Offset - delta.Y);
+		lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+	end;
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
 			dragStart = input.Position
-			startPos = frame.Position
+			startPos = gui.Position
+			lastMousePos = UserInputService:GetMouseLocation()
+	
 			input.Changed:Connect(function()
 				if input.UserInputState == Enum.UserInputState.End then
-					dragToggle = false
+					dragging = false
 				end
 			end)
 		end
 	end)
 	
-	UIS.InputChanged:Connect(function(input)
+	gui.InputChanged:Connect(function(input)
 		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
-			if dragToggle then
-				updateInput(input)
-			end
+			dragInput = input
 		end
 	end)
+	
+	runService.Heartbeat:Connect(Update)
 end
-coroutine.wrap(NQSMJX_fake_script)()
+coroutine.wrap(ZEXZ_fake_script)()
+local function FOZOED_fake_script() -- ImageButton_2.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton_2)
+
+	local teleportservice = game:GetService("TeleportService")
+	
+	local PLACE_ID = 71362208620602 -- poe o jogo certo vai caga
+	script.Parent.MouseButton1Click:Connect(function()
+	local players = game.Players:GetPlayers()
+	for i, player in players do
+		teleportservice:Teleport(PLACE_ID, player)
+	end
+	end)
+end
+coroutine.wrap(FOZOED_fake_script)()
+local function ANTPFWY_fake_script() -- ImageButton_3.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton_3)
+
+	local teleportservice = game:GetService("TeleportService")
+	
+	local PLACE_ID = 123193731906303 -- poe o jogo certo vai caga
+	script.Parent.MouseButton1Click:Connect(function()
+	local players = game.Players:GetPlayers()
+	for i, player in players do
+		teleportservice:Teleport(PLACE_ID, player)
+	end
+	end)
+end
+coroutine.wrap(ANTPFWY_fake_script)()
+local function CNVST_fake_script() -- ImageButton_4.LocalScript 
+	local script = Instance.new('LocalScript', ImageButton_4)
+
+	local teleportservice = game:GetService("TeleportService")
+	
+	local PLACE_ID = 138491015914639 -- poe o jogo certo vai caga
+	script.Parent.MouseButton1Click:Connect(function()
+	local players = game.Players:GetPlayers()
+	for i, player in players do
+		teleportservice:Teleport(PLACE_ID, player)
+	end
+	end)
+end
+coroutine.wrap(CNVST_fake_script)()
+local function DKDPRGU_fake_script() -- bullet.blacklist 
+	local script = Instance.new('LocalScript', bullet)
+
+	local player = game.Players.LocalPlayer
+	local banned = {"Roblox", "davidbazuski", "builderman", "exser","ServerSideSS", "BOB11U0U"} -- nome dos macaco
+	local lindos = {"ItsPizzaTime_8", "dxrhhh"}
+	
+	for i = 1, #banned do
+		if player.Name == banned[i] then
+			script.Parent.kaganera:Destroy()
+			function aviso()
+				script.Parent.notificacao.aviso.Text = "Blacklist🤣🤣"
+				wait(0.2)
+				script.Parent.notificacao:TweenPosition(UDim2.new(0.668,0,0.817,0))
+				wait(2)
+				script.Parent.notificacao:TweenPosition(UDim2.new(1,0,0.817,0))
+				wait(1)
+			end
+			aviso()
+			task.wait()
+			
+			player:Kick("BlackListed!")
+			player:Destroy()
+		
+		end
+	end
+	for i = 1, #lindos do
+		if player.Name == lindos[i] then
+			function aviso()
+			script.Parent.notificacao.aviso.Text = "White Listed!"
+			wait(0.2)
+			script.Parent.notificacao:TweenPosition(UDim2.new(0.668,0,0.817,0))
+			wait(2)
+			script.Parent.notificacao:TweenPosition(UDim2.new(1,0,0.817,0))
+			end
+			aviso()
+		end
+		
+	end
+	
+			function aviso()
+				script.Parent.notificacao.aviso.Text = "Welcome buddy!"
+				wait(0.2)
+				script.Parent.notificacao:TweenPosition(UDim2.new(0.668,0,0.817,0))
+				wait(2)
+				script.Parent.notificacao:TweenPosition(UDim2.new(1,0,0.817,0))
+				wait(1)
+			end
+			aviso()
+		task.wait()
+		if game.ReplicatedStorage.Remotes.ez.Parent then
+		script.Parent.notificacao.aviso.Text = "Backdoor Founded!"
+		wait(0.2)
+		script.Parent.notificacao:TweenPosition(UDim2.new(0.668,0,0.817,0))
+		wait(2)
+		script.Parent.notificacao:TweenPosition(UDim2.new(1,0,0.817,0))
+		else
+		script.Parent.notificacao.aviso.Text = "Backdoor not found."
+		wait(0.2)
+		script.Parent.notificacao:TweenPosition(UDim2.new(0.668,0,0.817,0))
+		wait(2)
+		script.Parent.notificacao:TweenPosition(UDim2.new(1,0,0.817,0))
+	    end
+end
+coroutine.wrap(DKDPRGU_fake_script)()
+local function GGTSO_fake_script() -- ImageButton_5.balançar 
+	local script = Instance.new('LocalScript', ImageButton_5)
+
+	local button = script.Parent
+	local TweenService = game:GetService("TweenService")
+	
+	local tweenInfo = TweenInfo.new(
+		1, -- Time
+		Enum.EasingStyle.Sine, -- EasingStyle
+		Enum.EasingDirection.InOut, -- EasingDirection
+		-1, -- RepeatCount (-1 for infinite)
+		true -- Reverses the tween
+	)
+	
+	local goal = {}
+	goal.Rotation = 10 -- Rotate 10 degrees to the right
+	
+	local tween = TweenService:Create(button, tweenInfo, goal)
+	tween:Play()
+	
+end
+coroutine.wrap(GGTSO_fake_script)()
+local function NEAIKX_fake_script() -- ImageButton_5.fecha 
+	local script = Instance.new('LocalScript', ImageButton_5)
+
+	local button = script.Parent
+	local kaganeraFrame = button.Parent.exec
+	
+	button.MouseButton1Click:Connect(function()
+		if kaganeraFrame then
+			kaganeraFrame.Visible = true
+		end
+	end)
+	
+end
+coroutine.wrap(NEAIKX_fake_script)()
+local function UIVD_fake_script() -- ImageButton_5.abri 
+	local script = Instance.new('LocalScript', ImageButton_5)
+
+	local button = script.Parent
+	local kaganeraFrame = button.Parent.exec
+	
+	button.MouseButton1Click:Connect(function()
+	    if kaganeraFrame then
+	        kaganeraFrame.Visible = true
+	    end
+	end)
+	
+	
+	
+end
+coroutine.wrap(UIVD_fake_script)()
